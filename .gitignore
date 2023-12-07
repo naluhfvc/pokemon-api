@@ -1,0 +1,21 @@
+# Arquivos de configuração
+.env
+
+# Dependências instaladas
+/node_modules
+
+# Arquivos de log
+logs/
+
+# Arquivos gerados pelo sistema operacional
+.DS_Store
+Thumbs.db
+
+# Arquivos de backup
+*.bak
+*.swp
+*.swo
+
+# Arquivos de cache
+.cache/
+dist/
