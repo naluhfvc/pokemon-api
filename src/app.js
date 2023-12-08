@@ -6,6 +6,6 @@ const routes = require("./routes");
 app.use(morgan("dev"));
 app.use(express.json());
 
-app.use("/pokemon/", routes);
+app.use("/api/pokemon/", routes);
 
 module.exports = app;
