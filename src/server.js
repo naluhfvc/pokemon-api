@@ -2,6 +2,7 @@ const mongoose = require("mongoose");
 require("dotenv").config();
 const app = require("./app");
 
+// Conecta com o banco de dados
 mongoose
     .connect(process.env.DB_CONNECT)
     .then(() => {
@@ -12,6 +13,7 @@ mongoose
         console.log(err.message);
     });
 
+// Inicia o servidor
 const startServer = () => {
     const port = process.env.PORT || 3000;
     app.listen(port, () => {
@@ -19,4 +21,5 @@ const startServer = () => {
     });
 };
 
+// Inicia o servidor apos a conexão com o banco de dados
 app.on("ready", startServer);

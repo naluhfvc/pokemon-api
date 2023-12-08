@@ -1,12 +1,13 @@
-const Pokemon = require('../models/pokemonModel');
+const Pokemon = require("../models/pokemonModel");
+const { successResponse, errorResponse } = require("../utils/apiResponse");
 
 // Obtém todos os pokémons.
 const getAllPokemon = async (req, res) => {
     try {
         const allPokemon = await Pokemon.find();
-        res.status(200).json(allPokemon);
+        return successResponse(res, 200, { pokemons: allPokemon });
     } catch (err) {
-        res.status(500).json({ message: err.message });
+        return errorResponse(res, 500, err.message);
     }
 };
 
@@ -14,25 +15,16 @@ const getAllPokemon = async (req, res) => {
 const getPokemonById = async (req, res) => {
     try {
         const pokemon = await Pokemon.findById(req.params.id);
-        res.status(200).json(pokemon);
+        if (!pokemon) return errorResponse(res, 404, "Pokemon not found");
+
+        return successResponse(res, 200, { pokemon: pokemon });
     } catch (err) {
-        res.status(500).json({ message: err.message });
+        return errorResponse(res, 500, err.message);
     }
 };
 
-// Cria um novo pokémon.
-const createPokemon = async (req, res) => {
-    try {
-        const newPokemon = new Pokemon(req.body);
-        const savedPokemon = await newPokemon.save();
-        res.status(201).json(savedPokemon);
-    } catch (err) {
-        res.status(500).json({ message: err.message });
-    }
-};
 
 module.exports = {
     getAllPokemon,
     getPokemonById,
-    createPokemon,
 };

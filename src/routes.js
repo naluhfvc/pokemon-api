@@ -5,7 +5,6 @@ const pokemonController = require("./controllers/pokemonController");
 router
     .route("/")
     .get(pokemonController.getAllPokemon)
-    .post(pokemonController.createPokemon);
 
 router.route("/:id")
     .get(pokemonController.getPokemonById);
