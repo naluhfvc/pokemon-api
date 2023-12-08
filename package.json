@@ -4,7 +4,8 @@
   "description": "Pokemon api feita em NodeJS, Express com MongoDB",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js"
   },
   "author": "Ana Luiza Favacho",
   "license": "ISC",
