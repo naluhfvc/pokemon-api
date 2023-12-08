@@ -1,4 +1,4 @@
-﻿name;pokedex_number;image_name;generation;evolution_stage;evolved;family_id;cross_gen;type1;type2;weather1;weather2;stat_total;atk;def;sta;legendary;aquireable;spawns;regional;raidable;hatchable;shiny;nest;new;not_gettable;future_evolve;100_CP_40;100_CP_39
+﻿name;pokedex_number;image_name;generation;evolution_stage;evolved;family_id;cross_gen;type1;type2;weather1;weather2;stat_total;atk;def;sta;legendary;aquireable;spawns;regional;raidable;hatchable;shiny;nest;new;not_gettable;future_evolve;_100_CP_40;_100_CP_39
 Bulbasaur;1;1;1;1;0;1;0;grass;poison;Sunny/clear;Cloudy;326;118;118;90;0;1;1;0;0;5;0;1;0;0;0;981;967
 Ivysaur;2;2;1;2;0;1;0;grass;poison;Sunny/clear;Cloudy;422;151;151;120;0;1;1;0;0;0;0;0;0;0;0;1.552;1.529
 Venusaur;3;3;1;3;1;1;0;grass;poison;Sunny/clear;Cloudy;556;198;198;160;0;1;1;0;0;0;0;0;0;0;0;2.568;2.531

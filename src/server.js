@@ -4,12 +4,13 @@ const app = require('./app');
 
 mongoose.connect(process.env.DB_CONNECT, {
   useNewUrlParser: true,
-  useFindAndModify: false,
   useUnifiedTopology: true,
 }).then(() => {
-    console.log('Connected to DB');
+    console.log('\n\nConnected to DB');
     app.emit('ready')
-}).catch((err) => {});
+}).catch((err) => {
+    console.log(err.message);
+});
 
 
 const startServer = () => {
