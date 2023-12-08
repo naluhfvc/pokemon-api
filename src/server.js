@@ -2,10 +2,7 @@ const mongoose = require('mongoose');
 require('dotenv').config();
 const app = require('./app');
 
-mongoose.connect(process.env.DB_CONNECT, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-}).then(() => {
+mongoose.connect(process.env.DB_CONNECT).then(() => {
     console.log('\n\nConnected to DB');
     app.emit('ready')
 }).catch((err) => {
